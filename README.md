@@ -1,6 +1,6 @@
 # TimeAlarms Library
 
-##Alarms
+## Alarms
 
 The Alarm library is a companion to the Time library that makes it easy to 
 perform tasks at specific times or after specific intervals.
@@ -172,7 +172,7 @@ Low level functions not usually required for typical applications:
   `readType(ID);`  - return the alarm type for the given alarm ID
   `getTriggeredAlarmId();`   -  returns the currently triggered  alarm id, only valid in an alarm callback
 
-##FAQ
+## FAQ
 
 Q: What hardware and software is needed to use this library?
 A: This library requires the Time library. No internal or external hardware is used by the Alarm library.
