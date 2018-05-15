@@ -123,12 +123,13 @@ so always use Alarm.delay instead of delay in sketches that use the Alarms libra
 
 Functional reference:
 
-// functions to create alarms and timers
+Functions to create alarms and timers
 
 `Alarm.triggerOnce(value, AlarmFunction);`
   Description: Call user provided AlarmFunction once at the date and time of the given value
   See the Ttime library for more on time_t values 
-  
+
+### alarmRepeat()
 `Alarm.alarmRepeat(Hour, Minute, Second,  AlarmFunction);`
   Description:  Calls user provided AlarmFunction  every day at the given Hour, Minute and Second.
 
@@ -138,6 +139,7 @@ Functional reference:
 `Alarm.alarmRepeat(DayOfWeek, Hour, Minute, Second,  AlarmFunction);`
   Description:  Calls user provided AlarmFunction  every week on the given  DayOfWeek, Hour, Minute and Second.
 
+### alarmOnce()
 `Alarm.alarmOnce(Hour, Minute, Second,  AlarmFunction);`
   Description:  Calls user provided AlarmFunction once when the Arduino time next reaches the given Hour, Minute and Second.
 
@@ -147,18 +149,21 @@ Functional reference:
 `Alarm.alarmOnce(DayOfWeek, Hour, Minute, Second,  AlarmFunction);`
   Description:  Calls user provided AlarmFunction  once only on the next  DayOfWeek, Hour, Minute and Second.
 
+### timerRepeat()
 `Alarm.timerRepeat(Period, TimerFunction);`
   Description:  Continuously calls user provided TimerFunction  after the given period in seconds has elapsed. 
 
 `Alarm.timerRepeat(Hour, Minute, Second, TimerFunction);`
   Description:  As timerRepeat above, but period is the number of seconds in the given Hour, Minute and Second parameters
 
+### timerOnce()
 `Alarm.timerOnce(Period, TimerFunction);`
   Description:  Calls user provided TimerFunction  once only after the given period in seconds has elapsed. 
 
 `Alarm.timerOnce(Hour, Minute, Second, TimerFunction);`
   Description:  As timerOnce above, but period is the number of seconds in the given Hour, Minute and Second parameters
 
+### Alarm.delay()
 `Alarm.delay( period)`
  Description: Similar to Arduino delay - pauses the program for the period (in miliseconds) specified.
  Call this function rather than the Arduino delay function when using the Alarms library.
